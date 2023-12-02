@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - fullstack
+
+  backend:
+    build: ./backend
+    ports:
+      - "8089:8089"
+    volumes:
+      - logs:/app/logs
+      - ./backend:/app
+      - /app/node_modules
+    depends_on:
+      - mongo
+    container_name: backend
+    networks:
+      - fullstack
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    # volumes:
+      # - ./frontend/src:app/src
+    stdin_open: true
+    tty: true
+    depends_on:
+      - backend
+    container_name: frontend
+    networks:
+      - fullstack
+
+networks:
+  fullstack:
+    driver: bridge
+
+volumes:
+  mongo-data:
+  logs:
+    driver: local
+

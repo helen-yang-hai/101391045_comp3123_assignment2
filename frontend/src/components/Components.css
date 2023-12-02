@@ -1,0 +1,74 @@
+div.updateContainer{
+    width: 500px;
+    border: 3px solid rgb(33, 109, 109);
+    padding: 10px;
+    margin: auto;
+}
+
+div.mb-3{
+    padding: 10px;
+    display:flex;
+
+}
+label.form-label{
+    width: 400px;
+    margin: auto;
+}
+
+button.btn.btn-primary{
+    padding: 10px;
+    margin: auto;
+}
+
+div.viewContainer{
+    width: 500px;
+    border: 3px solid rgb(33, 109, 109);
+    padding: 10px;
+    margin: auto;
+}
+
+p{
+    text-align: center;
+}
+
+div.listContainer{
+    width: 70%;
+    margin: auto;
+}
+
+table{
+    border: solid 0.5px gray;
+    margin: 15px;
+}
+
+tr{
+    text-align: center;
+}
+
+
+div.container{
+    width: 500px;
+    border: 3px solid rgb(33, 109, 109);
+    padding: 10px;
+    margin: auto;
+}
+
+h3{
+    text-align: center;
+    padding: 20px;
+}
+
+button{
+    padding: 10px;
+    margin: 20px;
+    background-color: rgb(32, 178, 246);
+}
+
+input{
+    padding: 10px;
+    margin: 10px;
+}
+
+input{
+    margin: auto;
+}
