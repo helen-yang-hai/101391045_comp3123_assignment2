@@ -1,15 +1,15 @@
 version: '3.8'
 
 services:
-  mongo:
-    image: mongo:latest
-    container_name: mongo
-    ports:
-      - "27017:27017"
-    volumes:
-      - mongo-data:/data/db
-    networks:
-      - fullstack
+  # mongo:
+  #   image: mongo:latest
+  #   container_name: mongo
+  #   ports:
+  #     - "27017:27017"
+  #   volumes:
+  #     - mongo-data:/data/db
+  #   networks:
+  #     - fullstack
 
   backend:
     build: ./backend
@@ -19,8 +19,8 @@ services:
       - logs:/app/logs
       - ./backend:/app
       - /app/node_modules
-    depends_on:
-      - mongo
+    # depends_on:
+    #   - mongo
     container_name: backend
     networks:
       - fullstack

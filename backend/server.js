@@ -9,14 +9,15 @@ const SERVER_PORT = 8089;
 
 const corsOptions ={
     origin:'http://localhost:3000', 
+    //origin:'http://frontend:3000', 
     credentials:true,
     optionSuccessStatus:200
 }
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
-//const DB_CONNECTION_STRING = "mongodb+srv://rootadmin:qwer1234@cluster0.mn0pq2e.mongodb.net/comp3123_assignment1?retryWrites=true&w=majority"
-const DB_CONNECTION_STRING = "mongodb://mongo:27017/f2023ems"
+const DB_CONNECTION_STRING = "mongodb+srv://rootadmin:qwer1234@cluster0.mn0pq2e.mongodb.net/comp3123_assignment1?retryWrites=true&w=majority"
+//const DB_CONNECTION_STRING = "mongodb://mongo:27017/f2023ems"
 mongoose.connect(DB_CONNECTION_STRING, {
     useNewUrlParser: true,
     useUnifiedTopology: true
